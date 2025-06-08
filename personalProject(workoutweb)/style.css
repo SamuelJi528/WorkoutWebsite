@@ -1,0 +1,21 @@
+body{
+    font-family: sans-serif;
+    background-color: white;
+    color: black;
+    padding: 20px;
+    line-height: 1.6;
+
+}
+
+.navlinks {
+    text-align: center;
+}
+.navlinks a{
+    color: blue;
+    margin-right:20px;
+    text-decoration: underline;
+
+}
+.navlinks a:hover {
+    color: rgb(255, 0, 0);
+}
