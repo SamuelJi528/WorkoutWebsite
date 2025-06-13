@@ -33,3 +33,8 @@ body{
 .navlinks a:hover {
     color: rgb(255, 0, 0);
 }
+
+.mediumpic{
+    max-width: 300px;
+    max-height: auto;
+}
