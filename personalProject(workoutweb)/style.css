@@ -22,11 +22,14 @@ body{
 
 }
 .navlinks {
-    text-align: center;
+    display:flex;
+    justify-content: center;
+    gap: 60px;
+
 }
 .navlinks a{
     color: rgb(33, 28, 28);
-    margin-right:20px;
+    transition: color 0.3s ease;
     text-decoration: none;
 
 }
@@ -38,3 +41,6 @@ body{
     max-width: 300px;
     max-height: auto;
 }
+
+
+/*add a fade out effect from switching pages, it requires javascript tho */
