@@ -3,9 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Diets</title>
 </head>
 <body>
-    
+    <div class = "TDEE calc">
+    <h2>TDEE Calculator</h2>
+    <label>Sex</label>
+    <select id = "sex">
+        <option value ="male">Male</option>
+        <option value ="female">Female</option>
+    </select>
+    <br>
+    <label>Age: </label>
+  <input type="number" id="age" placeholder="Enter your age">
+  <br>
+    <label>Height: </label>
+    <input type="number" id="heightft">
+    <span> feet </span>
+    <input type="number" id="heightin">
+    <span> inches</span>
+    <br>
+    <label>Weight:</label>
+    <input type ="number" id="weight">
+    <span>lbs</span>
+    <br>
+    <label>Activity level: </label>
+    <select>
+        <option value = "">---Select---</option>
+        <option value = "BMR">Basal Metabolic Rate (BMR)</option>
+        <option value = "Sedentary">Sedentary: You sit all day and barely move</option>
+        <option value = "lightly active">Light Active: walk 5k to 7.5k steps per day</option>
+        <option value = "moderately active">Moderately Active: 7.5k to 10k steps per day</option>
+        <option value = "very active">Very Active: 10k to 12.5k steps per day</option>
+        <option value = "extremely active">Extremely Active: above 12.5k steps per day</option>
+    </select>
+</div>
 </body>
 </html>
