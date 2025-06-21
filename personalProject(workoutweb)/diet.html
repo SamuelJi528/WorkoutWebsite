@@ -4,11 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="TDEE.css">
+
     <title>Diets</title>
 </head>
 <body>
+
+
+
+
+
+
+
     <div class = "TDEE calc">
     <h2>TDEE Calculator</h2>
+    <label>Units: </label>
+    <label>Imperial</label>
+    <input type ="radio" name="unit" value="imperial" checked>
+    <label>Metric</label>
+    <input type ="radio" name="unit" value="metric">
+    <br>
+
     <label>Sex</label>
     <select id = "sex">
         <option value ="male">Male</option>
@@ -16,16 +32,16 @@
     </select>
     <br>
     <label>Age: </label>
-  <input type="number" id="age" placeholder="Enter your age">
+  <input type="number" id="age">
   <br>
     <label>Height: </label>
-    <input type="number" id="heightft">
+    <input type="number" id="heightft" class="height-input">
     <span> feet </span>
-    <input type="number" id="heightin">
+    <input type="number" id="heightin" class="height-input">
     <span> inches</span>
     <br>
     <label>Weight:</label>
-    <input type ="number" id="weight">
+    <input type ="number" id="weight" class="weight-input">
     <span>lbs</span>
     <br>
     <label>Activity level: </label>
