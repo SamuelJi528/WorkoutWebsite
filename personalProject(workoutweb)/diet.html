@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="TDEE.css">
+    <script src="script.js"></script>
+
 
     <title>Diets</title>
 </head>
@@ -45,15 +47,18 @@
     <span>lbs</span>
     <br>
     <label>Activity level: </label>
-    <select>
+    <select id = "activity">
         <option value = "">---Select---</option>
-        <option value = "BMR">Basal Metabolic Rate (BMR)</option>
-        <option value = "Sedentary">Sedentary: You sit all day and barely move</option>
+        <option value = "bmr">Basal Metabolic Rate (BMR)</option>
+        <option value = "sedentary">Sedentary: You sit all day and barely move</option>
         <option value = "lightly active">Light Active: walk 5k to 7.5k steps per day</option>
         <option value = "moderately active">Moderately Active: 7.5k to 10k steps per day</option>
         <option value = "very active">Very Active: 10k to 12.5k steps per day</option>
         <option value = "extremely active">Extremely Active: above 12.5k steps per day</option>
     </select>
+    <br>
+    <button onclick ="calculateTDEE()">Calculate</button>
+    <p id="result"></p>
 </div>
 </body>
 </html>
