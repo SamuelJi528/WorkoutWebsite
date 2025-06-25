@@ -43,7 +43,11 @@ function calculateTDEE(){
 
     document.getElementById("result").textContent = `Total TDEE is ${Math.round(tdee)} calories per day`;
 
+}
 
-
-
+function scrollToTop(){
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    })
 }
