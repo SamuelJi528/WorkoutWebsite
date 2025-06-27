@@ -96,7 +96,7 @@ That doesn't mean fat is bad—it just means you gotta portion it smart. So yeah
 
 
 
-    <div class = "TDEE calc">
+<div class = "TDEE-calc">
     <h2>TDEE Calculator</h2>
     <label>Units: </label>
     <label>Imperial</label>
@@ -112,18 +112,33 @@ That doesn't mean fat is bad—it just means you gotta portion it smart. So yeah
     </select>
     <br>
     <label>Age: </label>
-  <input type="number" id="age">
+  <input type="number" id="age" class = "age-input" oninput="this.value = this.value.slice(0, 3);">
   <br>
+
+  <div class =height-imperial>
     <label>Height: </label>
-    <input type="number" id="heightft" class="height-input">
-    <span> feet </span>
-    <input type="number" id="heightin" class="height-input">
-    <span> inches</span>
+    <input type="number" id="heightft" class="height-input" oninput="this.value = this.value.slice(0, 1);"> feet
+    <input type="number" id="heightin" class="height-input" oninput="this.value = this.value.slice(0, 2);"> inches
     <br>
+    </div>
+<div class =height-metric style="display: none">
+    <label>Height: </label>
+    <input type="number" id="heightm" class="height-input" oninput="this.value = this.value.slice(0, 1);"> m
+    <input type="number" id="heightcm" class="height-input" oninput="this.value = this.value.slice(0, 2);"> cm
+    <br>
+    </div>
+
+    <div class="weight-imperial">
     <label>Weight:</label>
-    <input type ="number" id="weight" class="weight-input">
-    <span>lbs</span>
+    <input type ="number" id="weight" class="weight-input" oninput="this.value = this.value.slice(0, 3);"> lbs
     <br>
+
+    </div>
+      <div class="weight-metric" style="display:none">
+    <label>Weight:</label>
+    <input type ="number" id="weightkg" class="weight-input" oninput="this.value = this.value.slice(0, 3);"> kgs
+    <br>
+    </div>
     <label>Activity level: </label>
     <select id = "activity">
         <option value = "">---Select---</option>
@@ -137,6 +152,7 @@ That doesn't mean fat is bad—it just means you gotta portion it smart. So yeah
     <br>
     <button onclick ="calculateTDEE()">Calculate</button>
     <p id="result"></p>
+
 </div>
 </body>
 </html>
