@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="TDEE.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 
 
     <title>Diets</title>
@@ -112,31 +112,31 @@ That doesn't mean fat is bad—it just means you gotta portion it smart. So yeah
     </select>
     <br>
     <label>Age: </label>
-  <input type="number" id="age" class = "age-input" oninput="this.value = this.value.slice(0, 3);">
+  <input type="number" id="age" class = "age-input" oninput="this.value = this.value.slice(0, 3);"min="1">
   <br>
 
   <div class =height-imperial>
     <label>Height: </label>
-    <input type="number" id="heightft" class="height-input" oninput="this.value = this.value.slice(0, 1);"> feet
-    <input type="number" id="heightin" class="height-input" oninput="this.value = this.value.slice(0, 2);"> inches
+    <input type="number" id="heightft" class="height-input" oninput="this.value = this.value.slice(0, 1);"min="1"> feet
+    <input type="number" id="heightin" class="height-input" oninput="this.value = this.value.slice(0, 2);"min="0"> inches
     <br>
     </div>
 <div class =height-metric style="display: none">
     <label>Height: </label>
-    <input type="number" id="heightm" class="height-input" oninput="this.value = this.value.slice(0, 1);"> m
-    <input type="number" id="heightcm" class="height-input" oninput="this.value = this.value.slice(0, 2);"> cm
+    <input type="number" id="heightm" class="height-input" oninput="this.value = this.value.slice(0, 1);"min="0"> m
+    <input type="number" id="heightcm" class="height-input" oninput="this.value = this.value.slice(0, 2);"min="0"> cm
     <br>
     </div>
 
     <div class="weight-imperial">
     <label>Weight:</label>
-    <input type ="number" id="weight" class="weight-input" oninput="this.value = this.value.slice(0, 3);"> lbs
+    <input type ="number" id="weight" class="weight-input" oninput="this.value = this.value.slice(0, 3);" min="1"> lbs
     <br>
 
     </div>
       <div class="weight-metric" style="display:none">
     <label>Weight:</label>
-    <input type ="number" id="weightkg" class="weight-input" oninput="this.value = this.value.slice(0, 3);"> kgs
+    <input type ="number" id="weightkg" class="weight-input" oninput="this.value = this.value.slice(0, 3);"min="0"> kgs
     <br>
     </div>
     <label>Activity level: </label>

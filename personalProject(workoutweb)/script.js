@@ -28,18 +28,18 @@ function calculateTDEE(){
     let age = parseInt(document.getElementById("age").value);
     let sex = document.getElementById("sex").value;
     let unit = document.querySelector('input[name="unit"]:checked').value;
-    let weight, heightft,heightin; 
+    let weight, heightft,heightin, totalHeightCm; 
 
     if(unit == "imperial"){
         weight = parseInt(document.getElementById("weight").value);
-        heightft = parseInt(document.getElementById("heightft").value);
-        heightin = parseInt(document.getElementById("heightin").value);
+        height1 = parseInt(document.getElementById("heightft").value);
+        height2 = parseInt(document.getElementById("heightin").value);
     }
     else{
         weight = parseInt(document.getElementById("weightkg").value);
-        heightft = parseInt(document.getElementById("heightm").value);
-        heightin = parseInt(document.getElementById("heightcm").value); 
-        let totalHeightCm = (heightm * 100) + heightcm;
+        height1 = parseInt(document.getElementById("heightm").value);
+        height2 = parseInt(document.getElementById("heightcm").value); 
+        totalHeightCm = (height1 * 100) + height2;
 
     }
 
@@ -47,8 +47,8 @@ function calculateTDEE(){
     let maleBMR, femaleBMR; 
 
     if(unit == "imperial"){
-        maleBMR = 10 * (weight * 0.453592) + 6.25 * (((heightft * 12) + heightin) * 2.54) - 5 * age + 5;
-        femaleBMR = 10 * (weight * 0.453592) + 6.25 * (((heightft * 12) + heightin) * 2.54) - 5 * age - 161;
+        maleBMR = 10 * (weight * 0.453592) + 6.25 * (((height1 * 12) + height2) * 2.54) - 5 * age + 5;
+        femaleBMR = 10 * (weight * 0.453592) + 6.25 * (((height1 * 12) + height2) * 2.54) - 5 * age - 161;
     
     }
     else{
