@@ -40,14 +40,14 @@ body{
 .navlinks {
     display:flex;
     justify-content: center;
-    gap: 15px;
+    gap: 10px;
 
 }
 .navlinks a{
     color: rgb(33, 28, 28);
     transition: color 0.3s ease;
     text-decoration: none;
-    font-size:15px; 
+    font-size:10px; 
     text-align: center;
 }
 }
