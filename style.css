@@ -36,7 +36,19 @@ body{
 .navlinks a:hover {
     color: rgb(255, 0, 0);
 }
+@media (max-width:768px){
+.navlinks {
+    display:flex;
+    justify-content: center;
+    gap: 35px;
 
+}
+.navlinks a{
+    color: rgb(33, 28, 28);
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+}
 .mediumpic{
     max-width: 300px;
     max-height: auto;
