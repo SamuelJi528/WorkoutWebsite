@@ -59,7 +59,7 @@ function calculateTDEE(){
   
     let multiplier; 
     switch(activityLevel){
-        case "BMR":
+        case "bmr":
             multiplier = 1.0; 
             break;
         case "sedentary":
@@ -88,9 +88,34 @@ function calculateTDEE(){
     else{
         tdee = femaleBMR * multiplier; 
     }
+    let goal = document.getElementById("goal").value;
+    let resultText = `Your intake recommendation base on your goal:<ul>`; 
+    switch(goal){
+        case "maintenance":
+            resultText += `<li>Eat <strong>${Math.round(tdee)}</strong> calories daily based on your current activity level to stay current weight</li></ul>`; 
+            break;
+        case "surplus":
+            resultText += `<li>To gain 0.5lb (0.23 kg) per week with a 250 calories surplus eat <strong>${Math.round(tdee+250)}</strong> calories daily</li>`; 
+            resultText += `<li>To gain 1 lb (0.45 kg) per week with a 500 calories surplus eat <strong>${Math.round(tdee+500)}</strong> calories daily</li>`;
+            resultText += `<li>To gain 1.5lb (0.68 kg) per week with a 750 calories surplus eat <strong>${Math.round(tdee+750)}</strong> calories daily</li>`;
+            resultText += `<li>To gain 2 lb (0.91 kg) per week with a 1000 calories surplus eat <strong>${Math.round(tdee+1000)}</strong> calories daily</li>`;
+            resultText += `</ul>`;
+            break;
+        case "deficit":
+            resultText += `<li>To lose 0.5lb (0.23 kg) per week with a 250 calories deficit eat <strong>${Math.round(tdee-250)}</strong> calories daily</li>`; 
+            resultText += `<li>To lose 1 lb (0.45 kg) per week with a 500 calories deficit eat <strong>${Math.round(tdee-500)}</strong> calories daily</li>`;
+            resultText += `<li>To lose 1.5lb (0.68 kg) per week with a 750 calories deficit eat <strong>${Math.round(tdee-750)}</strong> calories daily</li>`;
+            resultText += `<li>To lose 2 lb (0.91 kg) per week with a 1000 calories deficit eat <strong>${Math.round(tdee-1000)}</strong> calories daily</li>`;
+            resultText += `</ul>`;
+            break;
+        default:
+            alert("Please select your goal"); 
+            return; 
+
+    }
 
     document.getElementById("result").textContent = `Total TDEE is ${Math.round(tdee)} calories per day`;
-
+    document.getElementById("result2").innerHTML = resultText;
 }
 
 function scrollToTop(){
